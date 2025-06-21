@@ -1,5 +1,10 @@
 import streamlit as st
 import joblib
+import os
+
+
+st.write("📂 Current directory:", os.getcwd())
+st.write("📄 Files in current directory:", os.listdir())
 
 # Load trained model and vectorizer
 model = joblib.load('emotion_model.pkl')
