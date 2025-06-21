@@ -4,12 +4,12 @@ import os
 import os
 import streamlit as st
 
-st.write("📂 Current directory:", os.getcwd())
-st.write("📄 Files:", os.listdir())
+
 
 # Load trained model and vectorizer
-model = joblib.load('emotion_model.pkl')
-vectorizer = joblib.load('vectorizer.pkl')
+model = joblib.load('EmotionDetection/emotion_model.pkl')
+vectorizer = joblib.load('EmotionDetection/vectorizer.pkl')
+
 
 # Emoji → emotion (for emoji-only input)
 emoji_to_emotion = {
